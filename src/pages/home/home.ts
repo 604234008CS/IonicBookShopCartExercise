@@ -3,6 +3,8 @@ import { NavController,  ModalController } from 'ionic-angular';
 import { BookCategoryPage } from '../book-category/book-category';
 import { CartPage } from '../cart/cart';
 import { TopsellerPage } from '../topseller/topseller';
+import { LoginPage } from '../login/login';
+
 
 
 
@@ -17,9 +19,16 @@ export class HomePage {
   numItem: number;  
   total:number;
 
+  
+
   constructor(public modalCtrl:ModalController, public navCtrl: NavController) {
 
   }
+  goToPageLogin(){
+    this.navCtrl.push(LoginPage);
+  }
+  
+  
 
   showCart(){    
     let modal=this.modalCtrl.create(CartPage);
