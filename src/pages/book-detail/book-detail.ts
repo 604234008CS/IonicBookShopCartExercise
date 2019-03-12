@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { Book } from '../../../models/book.model';
@@ -16,6 +17,10 @@ export class BookDetailPage {
   numItem: number;
 
   constructor(public modalCtrl:ModalController,public navCtrl: NavController, public navParams: NavParams, public bookRestProvider: BookRestProvider) {
+  }
+
+  goToPageLogin(){
+    this.navCtrl.push(LoginPage);
   }
 
   refreshNumItem(){

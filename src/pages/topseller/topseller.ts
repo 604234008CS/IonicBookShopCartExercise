@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController, AlertController, LoadingController } from 'ionic-angular';
 import { Book } from '../../../models/book.model';
@@ -19,6 +20,10 @@ export class TopsellerPage {
   numItem: number;
 
   constructor(public modalCtrl:ModalController,public loadingController:LoadingController,public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams, public bookRestProvider: BookRestProvider) {
+  }
+
+  goToPageLogin(){
+    this.navCtrl.push(LoginPage);
   }
 
   showCart(){    

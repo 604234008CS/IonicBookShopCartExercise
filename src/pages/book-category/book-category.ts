@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { BookListPage } from '../book-list/book-list';
@@ -13,6 +14,10 @@ export class BookCategoryPage {
   numItem: number;
 
   constructor(public modalCtrl:ModalController,public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  goToPageLogin(){
+    this.navCtrl.push(LoginPage);
   }
 
   showCart(){    

@@ -8,7 +8,8 @@
 
   <ion-navbar>
     <ion-title>Book Detail</ion-title>
-    <ion-buttons large end >        
+    <ion-buttons large end >
+        <button ion-button (click)="goToPageLogin()">Log in</button>        
         <button ion-button style=" font-size: 25px;" (click)="showCart()"><ion-icon name="cart" ></ion-icon>
           &nbsp;<ion-badge>{{numItem}}</ion-badge>
       </button>
